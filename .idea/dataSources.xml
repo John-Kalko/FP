@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" compressed="false" hash="2712741918" />
+  <component name="DataSourceManagerImpl" format="xml" hash="3596570982">
+    <data-source source="LOCAL" name="Data Source" product="Oracle" version="Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production" jdbc-version="11.2" driver-name="Oracle JDBC driver" driver-version="11.2.0.1.0" uuid="394b4e65-044c-4a08-8dab-956fb440a3e0">
+      <extra-name-characters>$#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+      <synchronize>true</synchronize>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:FP/1091924@//127.0.0.1:1521/XE</jdbc-url>
+      <schema-pattern>*.FP</schema-pattern>
+      <default-schemas>*.FP</default-schemas>
+      <libraries>
+        <library>
+          <url>file://$PROJECT_DIR$/lib/ojdbc6-11.2.0.1.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
 </project>
 
