@@ -19,9 +19,16 @@
     <bean id="entityManagerFactory" class=
             "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name = "persistenceUnitName" value="FPBaseMain"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="database" value="ORACLE" />
+                <property name="showSql" value="true" />
+            </bean>
+        </property>
     </bean>
 
-
+    <jee:jndi-lookup id="dataSource" jndi-name="java:/FPDS"/>
 
     <!-- For the internationalization purposes -->
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">

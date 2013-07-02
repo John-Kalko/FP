@@ -16,5 +16,7 @@ public interface UserAccountService {
 
     public UserAccountEntity findUser50();
 
+    public UserAccountEntity addUser();
+
 
 }

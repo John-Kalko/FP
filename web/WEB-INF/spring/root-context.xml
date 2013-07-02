@@ -4,11 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:annotation-config/>
+
     <!-- Root Context: defines resources for the whole application -->
     <!-- (@Component, @Service)  -->
     <context:component-scan base-package="ua.fp.dao"/>
+    <context:component-scan base-package="ua.fp.dao.impl"/>
     <context:component-scan base-package="ua.fp.bl"/>
     <context:component-scan base-package="ua.fp.service"/>
+    <context:component-scan base-package="ua.fp.service.impl"/>
 
     <!-- For JPA -->
     <import resource="data.xml" />
