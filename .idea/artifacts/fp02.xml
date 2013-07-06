@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="fp02">
+    <output-path>$PROJECT_DIR$/target/fp02.war</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="FP:war exploded" />
+      <element id="artifact" artifact-name="web:war exploded2" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="dir-copy" path="$PROJECT_DIR$/src/main/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.persistence:persistence-api:1.0-rev-1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

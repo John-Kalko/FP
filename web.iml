@@ -9,7 +9,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
           <root url="file://$MODULE_DIR$/web" relative="/" />
-          <root url="file://$MODULE_DIR$/lib" relative="WEB-INF/lib" />
         </webroots>
       </configuration>
     </facet>
@@ -26,14 +25,20 @@
     </facet>
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset1" name="XML Application Context" removed="false">
-          <file>file://$MODULE_DIR$/web/WEB-INF/spring/root-context.xml</file>
+        <fileset id="MVC appServlet servlet context" name="web: appServlet servlet context" removed="true">
+          <dependency>web: application context</dependency>
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/appServlet/servlet-context.xml</file>
         </fileset>
       </configuration>
     </facet>
     <facet type="AspectJ" name="AspectJ">
       <configuration>
         <option name="overrideAspectPath" value="true" />
+        <option name="aspectPath">
+          <projectLibrary>
+            <option name="name" value="Maven: org.aspectj:aspectjweaver:1.6.8" />
+          </projectLibrary>
+        </option>
       </configuration>
     </facet>
   </component>
@@ -50,6 +55,8 @@
     </content>
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="ojdbc6-11.2.0.1.0" level="project" />
+    <orderEntry type="library" name="org.codehaus.plexus:plexus-compiler-aspectj:2.3-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
@@ -68,7 +75,7 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.6.9" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.6.8" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0-rev-1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: hibernate:hibernate-entitymanager:3.4.0.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:ejb3-persistence:1.0.2.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate-commons-annotations:3.1.0.GA" level="project" />
@@ -89,7 +96,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:jcl-over-slf4j:1.5.8" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:slf4j-log4j12:1.5.8" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: log4j:log4j:1.2.14" level="project" />
-    <orderEntry type="library" name="ojdbc6-11.2.0.1.0" level="project" />
   </component>
 </module>
 

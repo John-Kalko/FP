@@ -10,7 +10,7 @@
     <annotation-driven/>
 
     <!-- All resources from folder webapp/resources would be mapped on url /resources/** -->
-    <resources mapping="/resources/**" location="WEB-INF/classes"/>
+    <resources mapping="/resources/**" location="/WEB-INF/classes/"/>
 
     <!-- Mapping to web pages -->
     <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

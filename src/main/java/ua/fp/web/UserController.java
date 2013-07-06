@@ -3,6 +3,7 @@ package ua.fp.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import ua.fp.domain.UserAccountEntity;
 import ua.fp.service.UserAccountService;
 import ua.fp.service.impl.UserAccountServiceImpl;
+
+import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,8 +25,8 @@ import ua.fp.service.impl.UserAccountServiceImpl;
 @Controller
 public class UserController {
 
-    @Autowired
-    @Qualifier("userAccountServiceImpl")
+    @Inject
+    @Named("userAccountServiceImpl")
     private UserAccountService uaService;
 
     @RequestMapping(value = "/index")
@@ -42,7 +46,7 @@ public class UserController {
     @RequestMapping(value = "/getUser50")
     public String getUser() {
 
-        String result = this.uaService.findUser50().getEmail();
+        this.uaService.findUser50();
 
         return "redirect:/index";
     }

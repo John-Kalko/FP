@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.codehaus.plexus:plexus-compiler-aspectj:2.3-SNAPSHOT" type="repository">
+    <properties maven-id="org.codehaus.plexus:plexus-compiler-aspectj:2.3-SNAPSHOT" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/plexus-compiler-aspectj-2.3-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

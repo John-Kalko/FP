@@ -10,7 +10,11 @@ import ua.fp.domain.UserAccountEntity;
 import ua.fp.service.UserAccountService;
 
 import javax.inject.Inject;
+import javax.inject.Named;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceUnit;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,8 +26,8 @@ import javax.persistence.PersistenceContext;
 @Service
 public class UserAccountServiceImpl implements UserAccountService {
 
-    @Autowired
-    @Qualifier("userDAOImpl")
+    @Inject
+    @Named("userDAOImpl")
     private UserDAO userDAO;
 
     public UserAccountServiceImpl() {
@@ -34,9 +38,10 @@ public class UserAccountServiceImpl implements UserAccountService {
         return this.userDAO.create(o);
     }
 
+    @Transactional
     @Override
     public UserAccountEntity findUser50() {
-        return this.userDAO.find(new Integer(50));
+        return this.userDAO.find(50);
     }
 
     @Override

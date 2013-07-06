@@ -3,6 +3,11 @@
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="Finance.war">
       <element id="artifact" artifact-name="FP:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: hibernate:hibernate-entitymanager:3.4.0.GA" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>
